@@ -1,0 +1,21 @@
+services:
+  yarp.apigw:
+    image: ${DOCKER_REGISTRY-}yarpapigw
+    build:
+      context: .
+      dockerfile: Yarp.ApiGw/Dockerfile
+
+  api:
+    image: ${DOCKER_REGISTRY-}api
+    build:
+      context: .
+      dockerfile: Api/Dockerfile
+
+  api2:
+    image: ${DOCKER_REGISTRY-}api
+    build:
+      context: .
+      dockerfile: Api/Dockerfile
+    ports:
+      - "6000:8080"
+      - "6001:8081"

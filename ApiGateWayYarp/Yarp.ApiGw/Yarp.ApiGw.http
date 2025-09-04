@@ -1,0 +1,18 @@
+@Yarp.ApiGw_HostAddress = http://localhost:56507
+@access_token = CfDJ8FMf-zOeyVRCuPpS3kkN81h7iLG9QAfPgNCEgQaGyfwO58PCFyGJWf6ySsI800luyDljCZsCguOJUg_hucCIb5-QuMegKKv0AlAFilBZuhUr72Gy84gfgQBGSeoQ6uLkiB3pQ0mdxqVJZNSHFClad2xNdjYpQNJQyPeyln1Fn_M-KNTXAAHQ9bK2sngdmbchykETbk72IQcMI5zSlXC0WwUcHKkfEstLkhU9RKL8FdLMNnq3zNC1O0GOxVmPorydsDkqtt3HfnyXI5D8xIiMj44BwU1jPnV7N97sIKDt4B0zTI5jJj0oS2h9D7OvWmWVUPMkAPxYZhE_hNyBdE2t0UmRyOuIFA090Gd6VAV5bRteoTd5oy7w2uhTyhDJ70NU7S0JeHh82puefmlYLlZ0vH0
+
+###
+
+GET {{Yarp.ApiGw_HostAddress}}/login?firstApi=true&secondApi=true
+Accept: application/json
+
+###
+
+GET {{Yarp.ApiGw_HostAddress}}/first-api/hello/
+Authorization: Bearer {{access_token}}
+
+###
+
+
+GET {{Yarp.ApiGw_HostAddress}}/second-api/hello/
+Authorization: Bearer {{access_token}}
